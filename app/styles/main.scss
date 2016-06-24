@@ -1,0 +1,327 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import 'vars';
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+  background-color: $body-bg;
+}
+
+img {
+  max-width: $screen-sm;
+}
+
+article {
+  background-color: $white;
+  padding-top: 105px;
+  @media (min-width: $screen-sm) {
+    padding-top: 75px;
+  }
+  display: block;
+  width: 100%;
+  @media (min-width: $screen-sm) {
+    width: $screen-sm;
+    min-width: $screen-sm;
+    max-width: $screen-sm;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+p {
+  line-height: 24px;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding: $medium-spacing $small-spacing $tiny-spacing;
+  font-family: $sans-sarif-font;
+  font-weight: 300;
+  background-color: $nav-bg;
+  transition: opacity 0.5s, padding 0.5s;
+  text-align: center;
+
+  @media (min-width: $screen-sm) {
+    font-size: 18px;
+    width: $screen-sm;
+    text-align: left;
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+  img {
+    height: 50px;
+    margin-bottom: $tiny-spacing;
+    @media (min-width: $screen-sm) {
+      width: 234px;
+      margin-left: $small-spacing;
+      margin-bottom: 0;
+      opacity: 0;
+    }
+  }
+
+  ul {
+    @include clearfix;
+    margin-left: -50px;
+    @media (min-width: $screen-sm) {
+      float: right;
+      margin-left: 0;
+    }
+
+    li {
+      display: inline-block;
+      text-transform: uppercase;
+      border-right: 1px solid black;
+      margin: $tiny-spacing;
+      padding-right: $medium-spacing;
+
+      @media (min-width: $screen-sm) {
+        margin: $small-spacing;
+        padding-right: $big-spacing;
+      }
+      &:last-of-type {
+        border: 0;
+        margin-right: 0
+      }
+      a {
+        color: black;
+      }
+    }
+  }
+
+  body.scrolling & {
+    padding: $tiny-spacing $tiny-spacing 0;
+    opacity: .95;
+    img {
+      transition: opacity 1s;
+      opacity: 1;
+    }
+  }
+}
+
+/* Custom page header */
+.header {
+  background-color: $nav-bg;
+  text-align: center;
+  // to handle white flicker that happens with nav animation on scroll up
+  margin-top: -$big-spacing;
+  padding-top: $huge-spacing;
+  padding-bottom: $huge-spacing;
+
+  display: none;
+  @media (min-width: $screen-sm) {
+    display: block;
+  }
+}
+
+.getting-married {
+  background: url("../images/married.jpg") no-repeat center;
+  background-size: $screen-sm;
+  height: 433px;
+//  display: none;
+//  @media (min-width: $screen-sm) {
+//    display: block;
+//  }
+}
+
+.region-map {
+  img {
+    width: 100%;
+  }
+}
+
+.travel-map {
+  background-image: url("../images/hotel_map.png");
+  background-size: $screen-sm;
+  height: 455px;
+  position: relative;
+}
+
+
+.bullet {
+  span {
+    display: inline-block;
+    background-color: $black;
+    border-radius: 50%;
+    text-align: center;
+    color: $white;
+    height: $huge-spacing;
+    width: $huge-spacing;
+    padding-top: 3px;
+    padding-left: 2px;
+    font-family: $slab-font;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &.a span {
+    background-color: #3D59AB;
+  }
+
+  &.b span {
+    background-color: #00A9CE;
+  }
+}
+
+p + .bullet {
+  margin-top: $mega-spacing;
+}
+
+span.price {
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-family: arial;
+  color: #777;
+  background-color: #ddd;
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-weight: normal;
+  position: relative;
+  bottom: 7px;
+}
+
+section {
+  text-align: center;
+  font-family: $serif-font;
+  background-color: $white;
+  padding: $big-spacing;
+
+  @media (min-width: $screen-sm) {
+    padding: $big-spacing ($mega-spacing * 3);
+  }
+
+  img {
+    margin: $big-spacing 0;
+  }
+
+  h2 {
+    font-family: $slab-font;
+    font-size: 31px;
+    text-transform: uppercase;
+    margin: $huge-spacing 0;
+  }
+
+  h3 {
+    font-family: $pretty-font;
+    font-size: 32px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: $huge-spacing;
+
+    span {
+      font-family: $handwritting-font;
+    }
+  }
+
+  h4 {
+    background-color: $black;
+    color: $white;
+    padding: $small-spacing $medium-spacing;
+    margin-top: ($mega-spacing*2);
+    display: inline-block;
+    font-family: $slab-font;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  img + h3 {
+    margin-top: 0;
+  }
+
+  p + img {
+    margin-top: ($mega-spacing * 2);
+  }
+
+  p + p {
+    margin-top: $huge-spacing;
+  }
+
+  p + h2 {
+    margin-top: ($huge-spacing * 2);
+  }
+
+  &.featured {
+    background-color: $alt-bg;
+    h3 {
+      margin-bottom: $medium-spacing;
+    }
+
+    &.alt {
+      background-color: $black;
+      color: $white;
+    }
+  }
+
+
+  &.travel {
+    padding-top: $mega-spacing;
+
+    h3 {
+      text-transform: none;
+    }
+  }
+
+  &.travel + &.featured {
+    margin-top: $mega-spacing;
+  }
+
+  &.gifts {
+    background-color: $alt-bg;
+    img + p {
+      margin-top: $mega-spacing;
+    }
+
+    .option {
+      text-align: left;
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-bottom: $big-spacing;
+
+      @media (min-width: $screen-sm) {
+        margin-left: 13%;
+      }
+
+      font-family: $slab-font;
+      font-size: 20px;
+      font-weight: bold;
+
+      .bullet {
+        display: inline-block;
+        margin-right: $small-spacing;
+      }
+
+      p {
+        margin-left: 45px;
+        font-family: $serif-font;
+        font-size: 13px;
+        font-weight: normal;
+      }
+    }
+
+  }
+}
+#rsvp {
+  margin-bottom: 100px;
+}
