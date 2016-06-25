@@ -128,7 +128,7 @@ gulp.task('default', ['clean'], function () {
   gulp.start('build');
 });
 
-gulp.task('deploy', ['build'], function() {
+gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
-    .pipe(ghPages({force: true, remoteUrl: 'https://github.com/jhoffner/twobubs-com.git', branch: 'gh-pages'}))
+    .pipe(ghPages({force: true, remoteUrl: 'https://github.com/jhoffner/twobubbs.com.git', branch: 'gh-pages'}))
 });
